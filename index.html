@@ -1,11 +1,11 @@
-<!doctype html>
 
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>CNS News story template</title>
+  <title>Contracted Out</title>
   <meta name="description" content="Merrill College of Journalism, UMD">
   <meta name="author" content="CNS Maryland">
 
@@ -20,6 +20,10 @@
   <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap" rel="stylesheet">
+
+    <!-- charts.js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
 
 
   <!-- METRICS -->
@@ -36,8 +40,279 @@
 </head>
 <body>
 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div id="nav-logo">
+      <a class="navbar-brand" href="http://cnsmaryland.org/">
+      <img src="https://cnsmaryland.org/wp-content/uploads/2020/02/site-header-logo.png" id="logo">
+      </a>
+    </div>
+  </nav>
+  <div class="container">
+<br>
+    <p class="text-center hed"><strong>Contracted out:</strong> How Maryland school districts do business</p>
+
+
+    <div class="jumbotron">
+      <div class="container">
+          <p>Maryland's school districts are required by law to tell the state how they spend their money -- and the Local News Network at the University of Maryland took a close look at that data. The 27,666 records we compiled include every business or individual contractor that got $25,000 or more from a school district in a single fiscal year since 2019. While some counties started filing that data as far back as 2010, most did not until after the Maryland General Assembly passed a bill requiring them to do so in 2019. </p>
+            <p>Select your county below to read about spending in your district and start exploring trends in its spending or search the database yourself.</p>
+        
+          <style>
+            .border-container {
+                border-top: 1.5px solid #060606;
+                border-bottom: 1.5px solid #030303;
+            }
+        </style>
+
+        <!--agencies list-->
+        <div class="border-container">
+          <p class="subhed">Maryland's School Board Agencies by County</p>
+          <div class="row">
+          <div class="col-md-4">
+          <ul class="list-unstyled">
+              
+                  <li><a href="/board/allegany-county">Allegany County Public Schools</a></li>
+                  
+                  
+                  <li><a href="/board/anne-arundel-county">Anne Arundel County Public Schools</a></li>
+                  
+                  
+                  <li><a href="/board/baltimore-city">Baltimore City Public Schools</a></li>
+                  
+                  </ul>
+                      </div>
+                      <div class="col-md-4">
+                          <ul class="list-unstyled">
+                      
+                  
+                  <li><a href="/board/baltimore-county">Baltimore County Public Schools</a></li>
+                  
+                  
+                  <li><a href="/board/calvert-county">Calvert County Public Schools</a></li>
+                  
+                  
+                  <li><a href="/board/caroline-county">Caroline County Public Schools</a></li>
+                  
+                  </ul>
+                      </div>
+                      <div class="col-md-4">
+                          <ul class="list-unstyled">
+                      
+                  
+                  <li><a href="/board/carroll-county">Carroll County Public Schools</a></li>
+                  
+                  
+                  <li><a href="/board/cecil-county">Cecil County Public Schools</a></li>
+                  
+                  
+                  <li><a href="/board/charles-county">Charles County Public Schools</a></li>
+                  
+                  </ul>
+                      </div>
+                      <div class="col-md-4">
+                          <ul class="list-unstyled">
+                      
+                  
+                  <li><a href="/board/dorchester-county">Dorchester County Public Schools</a></li>
+                  
+                  
+                  <li><a href="/board/frederick-county">Frederick County Public Schools</a></li>
+                  
+                  
+                  <li><a href="/board/harford-county">Harford County Public Schools</a></li>
+                  
+                  </ul>
+                      </div>
+                      <div class="col-md-4">
+                          <ul class="list-unstyled">
+                      
+                  
+                  <li><a href="/board/howard-county">Howard County Public Schools</a></li>
+                  
+                  
+                  <li><a href="/board/kent-county">Kent County Public Schools</a></li>
+                  
+                  
+                  <li><a href="/board/montgomery-county">Montgomery County Public Schools</a></li>
+                  
+                  </ul>
+                      </div>
+                      <div class="col-md-4">
+                          <ul class="list-unstyled">
+                      
+                  
+                  <li><a href="/board/garrett-county">Oakland, Garrett County Public Schools</a></li>
+                  
+                  
+                  <li><a href="/board/prince-georges-county">Prince George&#39;s County Public Schools</a></li>
+                  
+                  
+                  <li><a href="/board/queen-annes-county">Queen Anne&#39;s County Public Schools</a></li>
+                  
+                  </ul>
+                      </div>
+                      <div class="col-md-4">
+                          <ul class="list-unstyled">
+                      
+                  
+                  <li><a href="/board/somerset-county">Somerset County Public Schools</a></li>
+                  
+                  
+                  <li><a href="/board/st-marys-county">St Mary&#39;s County Public Schools</a></li>
+                  
+                  
+                  <li><a href="/board/talbot-county">Talbot County Public Schools</a></li>
+                  
+                  </ul>
+                      </div>
+                      <div class="col-md-4">
+                          <ul class="list-unstyled">
+                      
+                  
+                  <li><a href="/board/washington-county">Washington County Public Schools</a></li>
+                  
+                  
+                  <li><a href="/board/wicomico-county">Wicomico County Public Schools</a></li>
+                  
+                  
+                  <li><a href="/board/worcester-county">Worcester County Public Schools</a></li>
+                  
+                  
+              </ul>
+          </div>
+        </div>
+        </div>
+
+    <p class="caption">Click here to browse all entries and conduct in depth searches of the payments: <a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?_sort=rowid&exclude__exact=FALSE&_nocol=exclude&_nocol=slug"> BOE Spending Database</a></p>
   
-  Hello World
+  </div>
+</div>
+
+<br>
+<!--chart-->
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <p>If you've ever wondered how your local Maryland school district is spending your tax dollars, there's now an easy way to find out.</p>
+
+        <p>On this site and <a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?_sort=rowid&exclude__exact=FALSE&_nocol=exclude&_nocol=slug">its accompanying database</a> you will find data showing every vendor payment of $25,000 or more made by every school district in the state since the 2019-2020 school year. Payments for health insurance, buses, computers, meals - it's all there.</p>
+        
+        <p>It's all part of "Contracted Out," a project of the Local News Network at the University of Maryland's Philip Merrill College of Journalism.</p>
+        
+        <p>
+          Students and professors at the college have spent the last four months gathering and refining data that, under state law, is supposed to be posted on the state’s Open Data Portal. Huge chunks of data were missing until UMD students and faculty demanded it. And the data was messy – with some vendors going by several different names – until we cleaned it up.  
+        </p>
+
+        <p>The result of that work? This comprehensive look at spending in all 24 of the state's public school districts.</p>
+    </div>
+    <div class="col-md-8">
+      <canvas id="myChart" width="400" height="300"></canvas>
+    </div>
+  </div>
+</div>
+<!--chart end-->
+<br>
+
+
+<!--search start-->
+<div class="jumbotron">
+  <div class="border-container">
+    <p class="subhed">Maryland School Board Spending by Vendor</p>
+    <p class="text-center caption">Search for a vendor using a word or phrase like "Amazon" or "construction" below:</p>
+    <form action="https://md-boe-spending.herokuapp.com/boe_spending/vendors" method="GET">
+      <label for="search">Search term:</label>
+      <input type="text" id="search" name="_search" required>
+      <input type="hidden" name="_sort" value="rowid">
+      <input type="hidden" name="_nocol" value="exclude">
+      <input type="hidden" name="_nocol" value="slug">
+      <input type="hidden" name="exclude__exact" value="FALSE">
+      <input type="submit" value="Search">
+  </form>
+  </div>
+</div>
+<!--search end-->
+
+
+<br>
+<p class="caption">Some counties have provided incomplete records, <a href="/methodology">read about our limitations and methodology here.</a></p>
+
+ </div>
+ </div>
+  <!-- close container -->
+
+<!-- Add the chart code -->
+<script>
+  // Get the data for the chart using AJAX
+  var state_chart_data_url = "https://md-boe-spending.herokuapp.com/boe_spending.json?sql=select%0D%0A++fiscal_year%2C%0D%0A++round(sum(amount)%2C+1)+as+total%0D%0Afrom%0D%0A++vendors%0D%0Awhere+%0D%0Afiscal_year+%3E+2018%0D%0Agroup+by%0D%0A++1%0D%0A%0D%0A";
+  var state_chart_values = [6411057437.0, 6326062330.5, 6646725465.5, 6955382711.4];
+  console.log(state_chart_values);
+  var state_chart_labels = ["2019", "2020", "2021", "2022"];
+
+        // Create the chart
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: state_chart_labels,
+                datasets: [{
+                    label: 'Total spending',
+                    data: state_chart_values,
+                    backgroundColor: 'rgb(254,121,48,0.17)',
+                    borderColor: '#FE7930',
+                    borderWidth: 1
+                }]
+              },
+
+            options: {
+              responsive: true,
+              layout: {
+            padding: 20
+        },
+        plugins: {
+            legend: false,
+            title: {
+                display: true,
+                text: 'Total Statewide School Board Spending FY2019-FY2022',
+                font: {
+                    size: 18
+                }
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        },
+    },
+        });
+</script>
+
+<!-- Footer-->
+   <div class="footer">
+    <p class="text-center">Copyright 2023 Capital News Service</p>
+</div>
+<!-- end footer-->
+
+
+
+<!-- METRICS -->
+  <!-- START Parse.ly Include: Standard -->
+  <div id="parsely-root" style="display: none">
+    <span id="parsely-cfg" data-parsely-site="cnsmaryland.org"></span>
+  </div>
+  <script>
+      (function(s, p, d) {
+        var h=d.location.protocol, i=p+"-"+s,
+            e=d.getElementById(i), r=d.getElementById(p+"-root"),
+            u=h==="https:"?"d1z2jf7jlzjs58.cloudfront.net"
+            :"static."+p+".com";
+        if (e) return;
+        e = d.createElement(s); e.id = i; e.async = true;
+        e.src = h+"//"+u+"/p.js"; r.appendChild(e);
+      })("script", "parsely", document);
+  </script>
+  <!-- END Parse.ly Include: Standard -->
+
 
 </body>
 </html>
