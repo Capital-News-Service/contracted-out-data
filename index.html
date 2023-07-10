@@ -49,13 +49,13 @@
   </nav>
   <div class="container">
 <br>
-    <p class="text-center hed"><strong>Contracted out:</strong> How Maryland school districts do business</p>
+    <p class="text-center hed"><strong><a href="/">Contracted out:</a></strong> How Maryland school districts do business</p>
 
 
     <div class="jumbotron">
       <div class="container">
-          <p>Maryland's school districts are required by law to tell the state how they spend their money -- and the Local News Network at the University of Maryland took a close look at that data. The 27,666 records we compiled include every business or individual contractor that got $25,000 or more from a school district in a single fiscal year since 2019. While some counties started filing that data as far back as 2010, most did not until after the Maryland General Assembly passed a bill requiring them to do so in 2019. </p>
-            <p>Select your county below to read about spending in your district and start exploring trends in its spending or search the database yourself.</p>
+          <p class="lead">Maryland's school districts are required by law to tell the state how they spend their money -- and the Local News Network at the University of Maryland took a close look at that data. The more than 26,000 records we compiled include every business or individual contractor that got $25,000 or more from a school district in a single fiscal year. While some counties started filing that data as far back as 2010, most did not until after the Maryland General Assembly passed a bill requiring them to do so in 2019. </p>
+            <p class="lead">Select your county below to read about spending in your district and start exploring trends in its spending or search the database yourself.</p>
         
           <style>
             .border-container {
@@ -63,6 +63,19 @@
                 border-bottom: 1.5px solid #030303;
             }
         </style>
+
+<style>
+  ul.list-unstyled {
+    padding-left: 0;
+  }
+  
+  ul.list-unstyled li {
+    text-align: left;
+    font-size: 1.25em;
+    list-style: none;
+    margin-left: 0;
+  }
+</style>
 
         <!--agencies list-->
         <div class="border-container">
@@ -193,17 +206,17 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4">
-      <p>If you've ever wondered how your local Maryland school district is spending your tax dollars, there's now an easy way to find out.</p>
+      <p class="lead">If you've ever wondered how your local Maryland school district is spending your tax dollars, there's now an easy way to find out.</p>
 
-        <p>On this site and <a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?_sort=rowid&exclude__exact=FALSE&_nocol=exclude&_nocol=slug">its accompanying database</a> you will find data showing every vendor payment of $25,000 or more made by every school district in the state since the 2019-2020 school year. Payments for health insurance, buses, computers, meals - it's all there.</p>
+        <p class="lead">On this site and <a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?_sort=rowid&exclude__exact=FALSE&_nocol=exclude&_nocol=slug">its accompanying database</a> you will find data showing every vendor payment of $25,000 or more made by every school district in the state since the 2019-2020 school year. Payments for health insurance, buses, computers, meals - it's all there.</p>
         
-        <p>It's all part of "Contracted Out," a project of the Local News Network at the University of Maryland's Philip Merrill College of Journalism.</p>
+        <p class="lead">It's all part of "Contracted Out," a project of the Local News Network at the University of Maryland's Philip Merrill College of Journalism.</p>
         
-        <p>
+        <p class="lead">
           Students and professors at the college have spent the last four months gathering and refining data that, under state law, is supposed to be posted on the state’s Open Data Portal. Huge chunks of data were missing until UMD students and faculty demanded it. And the data was messy – with some vendors going by several different names – until we cleaned it up.  
         </p>
 
-        <p>The result of that work? This comprehensive look at spending in all 24 of the state's public school districts.</p>
+        <p class="lead">The result of that work? This comprehensive look at spending in all 24 of the state's public school districts.</p>
     </div>
     <div class="col-md-8">
       <canvas id="myChart" width="400" height="300"></canvas>
@@ -228,6 +241,7 @@
       <input type="hidden" name="exclude__exact" value="FALSE">
       <input type="submit" value="Search">
   </form>
+  <br>
   </div>
 </div>
 <!--search end-->
@@ -259,7 +273,7 @@
                     data: state_chart_values,
                     backgroundColor: 'rgb(254,121,48,0.17)',
                     borderColor: '#FE7930',
-                    borderWidth: 1
+                    borderWidth: 1.75
                 }]
               },
 
