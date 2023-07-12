@@ -70,6 +70,18 @@
 <br>
 
 <div class="border-container-bottom">
+
+  <style>
+    table.table-bordered th,
+    table.table-bordered td {
+      text-align: left;
+      font-size: 1.25em;
+      font-weight: bold;
+      padding: 8px;
+      border: 1px solid #000;
+    }
+  </style>
+  
 <!--top ten vendors table-->
 <p class="text-center subhed">Top 10 Vendors</p>
 <table class="table table-bordered">
@@ -148,7 +160,7 @@
 <p class="caption"><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?_facet=slug&amp;slug=calvert-county&amp;exclude__exact=FALSE&amp;_nocol=exclude&amp;_nocol=slug">Click here to browse</a> all of the data from Calvert County Public Schools</p>
 </div>
 <br>
-<p class="lead"> Between FY2019 and FY2022, Calvert County Public Schools paid a combined $95,007,257 to the vendor Carefirst Bluecross Blueshield, which is the school board's top recipient across all payments.</p>
+<p class="lead"> Between FY2019 and FY2022, Calvert County Public Schools paid a combined $120,740,344 to the vendor Carefirst Bluecross Blueshield, which is the school board's top recipient across all payments.</p>
 <p class="lead"> Hover over the bars on the chart below to see the top vendors over the observed years, or hover over the line graph to see the total spending from this school district by year.</p>
 <br>
 
@@ -205,7 +217,7 @@ var barChart = new Chart(ctxBar, {
             data: chart_values,
             backgroundColor: 'rgb(254, 121, 48, 0.17)',
             borderColor: '#FE7930',
-            borderWidth: 1
+            borderWidth: 1.75
         }]
     },
     options: {
@@ -243,10 +255,9 @@ var lineChart = new Chart(ctxLine, {
         datasets: [{
             label: 'Total spending',
             data: line_chart_values,
-            backgroundColor: 'rgb(254, 121, 48, 0.17)',
+            backgroundColor: 'rgb(254, 121, 48)',
             borderColor: '#FE7930',
-            borderWidth: 1,
-            fill: false // Add this line to remove the background fill
+            borderWidth: 2,
         }]
     },
     options: {
