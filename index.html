@@ -92,11 +92,6 @@
                   
                   <li><a href="/board/baltimore-city/">Baltimore City Public Schools</a></li>
                   
-                  </ul>
-                      </div>
-                      <div class="col-md-4">
-                          <ul class="list-unstyled">
-                      
                   
                   <li><a href="/board/baltimore-county/">Baltimore County Public Schools</a></li>
                   
@@ -106,25 +101,20 @@
                   
                   <li><a href="/board/caroline-county/">Caroline County Public Schools</a></li>
                   
-                  </ul>
-                      </div>
-                      <div class="col-md-4">
-                          <ul class="list-unstyled">
-                      
                   
                   <li><a href="/board/carroll-county/">Carroll County Public Schools</a></li>
                   
                   
                   <li><a href="/board/cecil-county/">Cecil County Public Schools</a></li>
                   
-                  
-                  <li><a href="/board/charles-county/">Charles County Public Schools</a></li>
-                  
                   </ul>
                       </div>
                       <div class="col-md-4">
                           <ul class="list-unstyled">
                       
+                  
+                  <li><a href="/board/charles-county/">Charles County Public Schools</a></li>
+                  
                   
                   <li><a href="/board/dorchester-county/">Dorchester County Public Schools</a></li>
                   
@@ -132,13 +122,11 @@
                   <li><a href="/board/frederick-county/">Frederick County Public Schools</a></li>
                   
                   
+                  <li><a href="/board/garrett-county/">Garrett County Public Schools</a></li>
+                  
+                  
                   <li><a href="/board/harford-county/">Harford County Public Schools</a></li>
                   
-                  </ul>
-                      </div>
-                      <div class="col-md-4">
-                          <ul class="list-unstyled">
-                      
                   
                   <li><a href="/board/howard-county/">Howard County Public Schools</a></li>
                   
@@ -154,33 +142,20 @@
                           <ul class="list-unstyled">
                       
                   
-                  <li><a href="/board/garrett-county/">Garrett County Public Schools</a></li>
-                  
-                  
                   <li><a href="/board/prince-georges-county/">Prince George&#39;s County Public Schools</a></li>
                   
                   
                   <li><a href="/board/queen-annes-county/">Queen Anne&#39;s County Public Schools</a></li>
                   
-                  </ul>
-                      </div>
-                      <div class="col-md-4">
-                          <ul class="list-unstyled">
-                      
                   
                   <li><a href="/board/somerset-county/">Somerset County Public Schools</a></li>
                   
                   
-                  <li><a href="/board/st-marys-county/">St Mary&#39;s County Public Schools</a></li>
+                  <li><a href="/board/st-marys-county/">St. Mary&#39;s County Public Schools</a></li>
                   
                   
                   <li><a href="/board/talbot-county/">Talbot County Public Schools</a></li>
                   
-                  </ul>
-                      </div>
-                      <div class="col-md-4">
-                          <ul class="list-unstyled">
-                      
                   
                   <li><a href="/board/washington-county/">Washington County Public Schools</a></li>
                   
@@ -194,16 +169,32 @@
               </ul>
           </div>
         </div>
-        </div>
+        </div>  
 
-    <p class="caption">Click here to browse all entries and conduct in depth searches of the payments: <a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?_sort=rowid&exclude__exact=FALSE&_nocol=exclude&_nocol=slug"> BOE Spending Database</a></p>
-  
-  </div>
+
+      <!--search start-->
+      <div class="border-container">
+          <p class="subhed">Maryland School Board Spending by Vendor</p>
+          <p class="text-center caption">Search for a vendor using a word or phrase like "Amazon" or "construction" below:</p>
+          <form action="https://md-boe-spending.herokuapp.com/boe_spending/vendors" method="GET">
+            <label for="search">Search term:</label>
+            <input type="text" id="search" name="_search" required>
+            <input type="hidden" name="_sort" value="rowid">
+            <input type="hidden" name="_nocol" value="exclude">
+            <input type="hidden" name="_nocol" value="slug">
+            <input type="hidden" name="exclude__exact" value="FALSE">
+            <input type="submit" value="Search">
+        </form>
+        <br>
+        <p class="caption">Click here to browse all entries and conduct in depth searches of the payments: <a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?_sort=rowid&exclude__exact=FALSE&_nocol=exclude&_nocol=slug"> BOE Spending Database</a></p>
+      </div>
+      <!--search end-->
+    </div>
 </div>
 
-<br>
 <!--chart-->
 <div class="container">
+  <br>
   <div class="row">
     <div class="col-md-4">
       <p class="lead">If you've ever wondered how your local Maryland school district is spending your tax dollars, there's now an easy way to find out.</p>
@@ -226,25 +217,6 @@
 <!--chart end-->
 <br>
 
-
-<!--search start-->
-<div class="jumbotron">
-  <div class="border-container">
-    <p class="subhed">Maryland School Board Spending by Vendor</p>
-    <p class="text-center caption">Search for a vendor using a word or phrase like "Amazon" or "construction" below:</p>
-    <form action="https://md-boe-spending.herokuapp.com/boe_spending/vendors" method="GET">
-      <label for="search">Search term:</label>
-      <input type="text" id="search" name="_search" required>
-      <input type="hidden" name="_sort" value="rowid">
-      <input type="hidden" name="_nocol" value="exclude">
-      <input type="hidden" name="_nocol" value="slug">
-      <input type="hidden" name="exclude__exact" value="FALSE">
-      <input type="submit" value="Search">
-  </form>
-  <br>
-  </div>
-</div>
-<!--search end-->
 
 
 <br>
