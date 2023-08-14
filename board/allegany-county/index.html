@@ -44,7 +44,7 @@
         <img src="https://cnsmaryland.org/wp-content/uploads/2020/02/site-header-logo.png" id="logo">
         </a>
       </div>
-    </nav>  
+    </nav>
 
   <style>
       .border-container {
@@ -64,7 +64,7 @@
 
       <div class="jumbotron">
         <div class="container">
-          <p class="lead">The Allegany County Public Schools board made 675 recorded payments above $25,000 from FY2019 to FY2022 to 267 total distinct vendors. The school board paid these major vendors a total of $204,557,782 over that period.</p>
+          <p class="lead">The Allegany County Public Schools board made 634 recorded payments above $25,000 from FY2019 to FY2022 to 267 total distinct vendors. The school board paid these major vendors a total of $204,557,782 over that period.</p>
           <p class="lead">This data does not contain payments to most local, state and federal government agencies such as the Internal Revenue Service or Maryland Board of Education, which are often the top vendor, because of inconsistencies among counties in interpreting the reporting law.</p>
           <p class="lead">Explore the top 10 recipients of that money below, or <a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?slug=allegany-county&amp;exclude__exact=FALSE">browse our database</a> for records from Allegany County Public Schools. </p</p>
 <br>
@@ -81,7 +81,7 @@
       border: 1px solid #000;
     }
   </style>
-  
+
 <!--top ten vendors table-->
 <p class="text-center subhed">Top 10 Vendors</p>
 <table class="table table-bordered">
@@ -92,67 +92,67 @@
     </tr>
   </thead>
   <tbody>
-    
-    
+
+
     <tr>
-      <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=CITIBANK+NA">Citibank Na</a></td>
+      <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=CITIBANK+NA">Citibank NA</a></td>
       <td>$79,721,743</td>
     </tr>
-    
-    
+
+
     <tr>
       <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=DALY+COMPUTERS+INC">Daly Computers Inc</a></td>
       <td>$8,455,913</td>
     </tr>
-    
-    
+
+
     <tr>
       <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=SCHOOL+THERAPY+SERVICES+INC">School Therapy Services Inc</a></td>
       <td>$7,278,867</td>
     </tr>
-    
-    
+
+
     <tr>
       <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=JEFFERSON+SCHOOL">Jefferson School</a></td>
       <td>$6,509,243</td>
     </tr>
-    
-    
+
+
     <tr>
       <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=WELLS+FARGO">Wells Fargo</a></td>
       <td>$6,316,835</td>
     </tr>
-    
-    
+
+
     <tr>
       <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=THE+POTOMAC+EDISON+COMPANY">The Potomac Edison Company</a></td>
       <td>$5,248,994</td>
     </tr>
-    
-    
+
+
     <tr>
       <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=SHEPPARD+PRATT+HEALTH+SYSTEM+INC">Sheppard Pratt Health System Inc</a></td>
       <td>$4,942,997</td>
     </tr>
-    
-    
+
+
     <tr>
       <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=CIGNA">Cigna</a></td>
       <td>$4,546,946</td>
     </tr>
-    
-    
+
+
     <tr>
-      <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=MARYLAND+ASSOCIATION+OF+BOARDS+OF+EDUCATION">Maryland Association Of Boards Of Education</a></td>
+      <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=MARYLAND+ASSOCIATION+OF+BOARDS+OF+EDUCATION">Maryland Association of Boards of Education</a></td>
       <td>$3,605,598</td>
     </tr>
-    
-    
+
+
     <tr>
       <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=BALTIMORE+CONTRACTORS+INC">Baltimore Contractors Inc</a></td>
       <td>$2,972,746</td>
     </tr>
-    
+
   </tbody>
 </table>
 <!--table end-->
@@ -199,7 +199,7 @@
   var data_url = "https://md-boe-spending.herokuapp.com/boe_spending.json?sql=select+payee_name+as+vendor_name%2C+sum%28amount%29+as+total%0D%0Afrom+vendors+%0D%0Awhere+slug=&#39;allegany-county&#39;+and+exclude+%3D+%27FALSE%27+and+fiscal_year+%3E+2018%0D%0Agroup+by+1%0D%0Aorder+by+2+desc%0D%0Alimit+10";
   var chart_values = [79721743.10999998, 8455913.41, 7278866.61, 6509242.73, 6316834.869999999, 5248993.72, 4942997.08, 4546945.63, 3605597.64, 2972746.4];
   var chart_labels = ["CITIBANK NA", "DALY COMPUTERS INC", "SCHOOL THERAPY SERVICES INC", "JEFFERSON SCHOOL", "WELLS FARGO", "THE POTOMAC EDISON COMPANY", "SHEPPARD PRATT HEALTH SYSTEM INC", "CIGNA", "MARYLAND ASSOCIATION OF BOARDS OF EDUCATION", "BALTIMORE CONTRACTORS INC"];
-  
+
   // Get the data for the line chart
   var line_data_url = "https://md-boe-spending.herokuapp.com/boe_spending.json?sql=SELECT+fiscal_year%2C+sum%28amount%29+as+total_spent%0D%0AFROM+vendors+%0D%0AWHERE+slug+%3D+%27allegany-county%27+AND+fiscal_year+%3E+2018+%0D%0AGROUP+BY+fiscal_year%0D%0AORDER+BY+fiscal_year";
   var line_chart_values = [52979316.26, 54692070.139999986, 58742748.88000002, 65957271.70999999];

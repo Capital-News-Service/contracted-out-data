@@ -44,7 +44,7 @@
         <img src="https://cnsmaryland.org/wp-content/uploads/2020/02/site-header-logo.png" id="logo">
         </a>
       </div>
-    </nav>  
+    </nav>
 
   <style>
       .border-container {
@@ -64,7 +64,7 @@
 
       <div class="jumbotron">
         <div class="container">
-          <p class="lead">The Garrett County Public Schools board made 460 recorded payments above $25,000 from FY2019 to FY2022 to 170 total distinct vendors. The school board paid these major vendors a total of $59,198,759 over that period.</p>
+          <p class="lead">The Garrett County Public Schools board made 439 recorded payments above $25,000 from FY2019 to FY2022 to 170 total distinct vendors. The school board paid these major vendors a total of $59,198,759 over that period.</p>
           <p class="lead">This data does not contain payments to most local, state and federal government agencies such as the Internal Revenue Service or Maryland Board of Education, which are often the top vendor, because of inconsistencies among counties in interpreting the reporting law.</p>
           <p class="lead">Explore the top 10 recipients of that money below, or <a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?slug=garrett-county&amp;exclude__exact=FALSE">browse our database</a> for records from Garrett County Public Schools. </p</p>
 <br>
@@ -81,7 +81,7 @@
       border: 1px solid #000;
     }
   </style>
-  
+
 <!--top ten vendors table-->
 <p class="text-center subhed">Top 10 Vendors</p>
 <table class="table table-bordered">
@@ -92,67 +92,67 @@
     </tr>
   </thead>
   <tbody>
-    
-    
+
+
     <tr>
       <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=THE+POTOMAC+EDISON+COMPANY">The Potomac Edison Company</a></td>
       <td>$3,369,982</td>
     </tr>
-    
-    
+
+
     <tr>
       <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=HARBEL+INC">Harbel Inc</a></td>
       <td>$2,684,873</td>
     </tr>
-    
-    
+
+
     <tr>
-      <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=CDW+GOVERNMENT+INC">Cdw Government Inc</a></td>
+      <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=CDW+GOVERNMENT+INC">CDW Government Inc</a></td>
       <td>$2,276,380</td>
     </tr>
-    
-    
+
+
     <tr>
       <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=BYCO+ENTERPRISES+INC">Byco Enterprises Inc</a></td>
       <td>$2,186,483</td>
     </tr>
-    
-    
+
+
     <tr>
       <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=DALE+E+EVANS+INC">Dale E Evans Inc</a></td>
       <td>$2,126,418</td>
     </tr>
-    
-    
+
+
     <tr>
-      <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=BANK+OF+AMERICA">Bank Of America</a></td>
+      <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=BANK+OF+AMERICA">Bank of America</a></td>
       <td>$1,490,385</td>
     </tr>
-    
-    
+
+
     <tr>
       <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=SCHOOL+THERAPY+SERVICES+INC">School Therapy Services Inc</a></td>
       <td>$1,386,525</td>
     </tr>
-    
-    
+
+
     <tr>
       <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=AMAZON">Amazon</a></td>
       <td>$1,373,625</td>
     </tr>
-    
-    
+
+
     <tr>
-      <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=US+FOODS+INC">Us Foods Inc</a></td>
+      <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=US+FOODS+INC">US Foods Inc</a></td>
       <td>$1,365,964</td>
     </tr>
-    
-    
+
+
     <tr>
-      <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=AIG+RETIREMENT">Aig Retirement</a></td>
+      <td><a href="https://md-boe-spending.herokuapp.com/boe_spending/vendors?payee_name=AIG+RETIREMENT">AIG Retirement</a></td>
       <td>$1,361,018</td>
     </tr>
-    
+
   </tbody>
 </table>
 <!--table end-->
@@ -199,7 +199,7 @@
   var data_url = "https://md-boe-spending.herokuapp.com/boe_spending.json?sql=select+payee_name+as+vendor_name%2C+sum%28amount%29+as+total%0D%0Afrom+vendors+%0D%0Awhere+slug=&#39;garrett-county&#39;+and+exclude+%3D+%27FALSE%27+and+fiscal_year+%3E+2018%0D%0Agroup+by+1%0D%0Aorder+by+2+desc%0D%0Alimit+10";
   var chart_values = [3369982.17, 2684873.38, 2276380.3600000003, 2186483.31, 2126418.46, 1490384.92, 1386525.06, 1373625.42, 1365964.45, 1361017.92];
   var chart_labels = ["THE POTOMAC EDISON COMPANY", "HARBEL INC", "CDW GOVERNMENT INC", "BYCO ENTERPRISES INC", "DALE E EVANS INC", "BANK OF AMERICA", "SCHOOL THERAPY SERVICES INC", "AMAZON", "US FOODS INC", "AIG RETIREMENT"];
-  
+
   // Get the data for the line chart
   var line_data_url = "https://md-boe-spending.herokuapp.com/boe_spending.json?sql=SELECT+fiscal_year%2C+sum%28amount%29+as+total_spent%0D%0AFROM+vendors+%0D%0AWHERE+slug+%3D+%27garrett-county%27+AND+fiscal_year+%3E+2018+%0D%0AGROUP+BY+fiscal_year%0D%0AORDER+BY+fiscal_year";
   var line_chart_values = [24258537.79, 26171705.95, 34372893.499999985, 29408028.240000002];
